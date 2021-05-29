@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "idk", "idk\idk.csproj", "{1684D439-32B8-4A7A-A7DA-437B2A86064E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1684D439-32B8-4A7A-A7DA-437B2A86064E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1684D439-32B8-4A7A-A7DA-437B2A86064E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1684D439-32B8-4A7A-A7DA-437B2A86064E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1684D439-32B8-4A7A-A7DA-437B2A86064E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75AF1FEC-DFFE-48B3-80C8-80DC1569E60E}
+	EndGlobalSection
+EndGlobal
