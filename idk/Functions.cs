@@ -171,14 +171,14 @@ namespace MessengerClient
                 Graphics gScreeny = Graphics.FromImage(screenshot);
                 gScreeny.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy);
                 screenshot.Save("pic.jpeg", ImageFormat.Jpeg);
-                Console.WriteLine("CREATION OF SCREENSHOT TIME: " + stopwatch.ElapsedMilliseconds);
+              //  Console.WriteLine("CREATION OF SCREENSHOT TIME: " + stopwatch.ElapsedMilliseconds);
                 screenshot.Save(ms, ImageFormat.Jpeg);
                 byte[] lol = compressByte(ms.ToArray());
                 Packet p = new Packet(lol, messageType.IMAGE);
-                Console.WriteLine(lol.LongLength);
+               // Console.WriteLine("Image Size"+lol.LongLength);
                 ProtoBuf.Serializer.SerializeWithLengthPrefix(stream, p, ProtoBuf.PrefixStyle.Base128);
                 stopwatch.Stop();
-                Console.WriteLine("ELAPSED TIME FINAL: + " + stopwatch.ElapsedMilliseconds);
+               // Console.WriteLine("ELAPSED TIME FINAL: + " + stopwatch.ElapsedMilliseconds);
                 stopwatch.Reset();
                 i++;
                 //https://stackoverflow.com/questions/749964/sending-and-receiving-an-image-over-sockets-with-c-sharp
@@ -204,7 +204,7 @@ namespace MessengerClient
         }
         public static void ScreenShareWindow(string[] data)
         {
-            // Console.WriteLine("image window opened");
+             Console.WriteLine("image window opened");
 
             pictureBox.Dock = DockStyle.Fill;
             window.Controls.Add(pictureBox);
@@ -229,7 +229,7 @@ namespace MessengerClient
             {
                 if (first == false)
                 {
-                    // Console.WriteLine("Not First");
+                   //   Console.WriteLine("Not First");
                     //pictureBox.Image=null;
                 }
                 try
@@ -240,7 +240,7 @@ namespace MessengerClient
                     // Console.WriteLine("Image applied tasdassdo screen");
                     Graphics gScreeny = Graphics.FromImage(image);
                     image.Save("lola.jpg", ImageFormat.Jpeg);
-                    // Console.WriteLine("Set new pic");
+                    //Console.WriteLine("Set new pic");
                     pictureBox.Image = image;
                     pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                     first = false;
@@ -249,7 +249,9 @@ namespace MessengerClient
                 }
                 catch (Exception e)
                 {
-
+                    Console.WriteLine(e.ToString());
+                    Console.WriteLine(e.StackTrace);
+                    Console.WriteLine(e);
                 }
             }
         }
@@ -315,7 +317,7 @@ namespace MessengerClient
         public static byte[] decompressByte(byte[] data)
         {
             using (var compressed = new MemoryStream(data))
-                using(var gs = new GZipStream(compressed,CompressionMode.Compress))
+                using(var gs = new GZipStream(compressed,CompressionMode.Decompress))
                     using(var rs = new MemoryStream())
                     {
                         gs.CopyTo(rs);

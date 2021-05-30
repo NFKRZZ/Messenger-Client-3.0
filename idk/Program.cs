@@ -277,6 +277,7 @@ namespace MessengerClient
                 {   
                     Packet  p = ProtoBuf.Serializer.DeserializeWithLengthPrefix<Packet>(stream, ProtoBuf.PrefixStyle.Base128);   
                     messageType type = p.messageType;
+                    //Console.WriteLine("This is a "+type);
                     if (type == messageType.STRING)
                     {
                         logs.Add(p);
@@ -344,10 +345,15 @@ namespace MessengerClient
                             screenshareOn = true;
                         }
                         Functions.ScreenImage(p.image);
+                     
                     }
                     else if (type == messageType.VIDEO)
                     {
 
+                    }
+                    else
+                    {
+                        Console.WriteLine("Unknown type "+type);
                     }
                 }
             }
