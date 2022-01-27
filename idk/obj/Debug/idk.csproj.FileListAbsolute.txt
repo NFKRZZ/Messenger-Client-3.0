@@ -24,7 +24,6 @@ C:\Users\winga\source\repos\idk\idk\bin\Debug\System.Collections.Immutable.xml
 C:\Users\winga\source\repos\idk\idk\bin\Debug\System.Memory.xml
 C:\Users\winga\source\repos\idk\idk\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\winga\source\repos\idk\idk\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\winga\source\repos\idk\idk\obj\Debug\idk.csprojAssemblyReference.cache
 C:\Users\winga\source\repos\idk\idk\bin\Debug\Microsoft.Win32.Registry.dll
 C:\Users\winga\source\repos\idk\idk\bin\Debug\NAudio.Asio.dll
 C:\Users\winga\source\repos\idk\idk\bin\Debug\NAudio.Core.dll
@@ -39,3 +38,4 @@ C:\Users\winga\source\repos\idk\idk\bin\Debug\Microsoft.Win32.Registry.xml
 C:\Users\winga\source\repos\idk\idk\bin\Debug\NAudio.xml
 C:\Users\winga\source\repos\idk\idk\bin\Debug\System.Security.AccessControl.xml
 C:\Users\winga\source\repos\idk\idk\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\winga\source\repos\idk\idk\obj\Debug\idk.csproj.AssemblyReference.cache

@@ -30,7 +30,7 @@ namespace MessengerClient
         public static bool windowNotOpen = true;
         static bool waiting = false;
         static bool first = true;
-        static Form window = new Form();
+        public static Form window = new Form();
         static PictureBox pictureBox = new PictureBox();
         static bool sizeChange = false;
         //  static ControlEventHandler client;

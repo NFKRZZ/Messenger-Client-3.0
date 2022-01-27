@@ -137,6 +137,7 @@ namespace MessengerClient
                             ssTask.Abort();
                             runningTasks.Remove(ssTask);
                             ssTask = null;
+                            Functions.window.Dispose();
                         }
                         else
                         {
